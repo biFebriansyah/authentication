@@ -94,6 +94,7 @@ public class AuthUserService implements _AuthUserService {
     public AuthDto getByWhat(String email, String fullname) {
 
         Query query = null;
+
         if (email != null && fullname == null) {
             query = entityManager.createQuery("From AuthModel WHERE email = :email").setParameter("email", email);
         }
